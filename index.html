@@ -12,6 +12,7 @@
     <div class="flex-container">
       <div class="title"><h1>Etch A Sketch</h1></div>
       <div class="mode">Mode: Coloring</div>
+      <div class="canvas"></div>
       <div class="content">
         <div class="board"></div>
         <div class="buttons">
@@ -25,16 +26,17 @@
           <button class="rainbowButton" onclick="changeColor('rainbow')">
             Rainbow
           </button>
-          <button onclick="resetBoard()">Reset</button>
+          <button class="resetButton" onclick="resetBoard()">Reset</button>
         </div>
         <div>
           <input
+            class="input"
             type="text"
             placeholder="Size of Board"
             value="16"
             onchange="changeSize(this.value)"
           />
-          <button>Set Size</button>
+          <button class="setSize">Set Size</button>
         </div>
         <div class="error">Input must be between 2 and 100</div>
       </div>
